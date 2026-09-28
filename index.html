@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using jQuery Selectors and Events</title>
+</head>
+<body>
+    <h1>Using jQuery Selectors and Events</h1>
+
+    <button id="changeText">Click Me</button>
+
+    <p id="doubleClick">Double-click this paragraph.</p>
+
+    <p id="hoverText">Hover over this text.</p>
+
+    <h2>jQuery Selectors Used</h2>
+
+    <dl>
+        <dt>#changeText</dt>
+        <dd>Selects the button with the ID "changeText" and changes its text when clicked.</dd>
+
+        <dt>#doubleClick</dt>
+        <dd>Selects the paragraph with the ID "doubleClick" and changes the text color when double-clicked.</dd>
+
+        <dt>#hoverText</dt>
+        <dd>Selects the paragraph with the ID "hoverText" and changes its background color when hovered over.</dd>
+    </dl>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#changeText").click(function() {
+                $(this).text("You clicked the button!");
+            });
+
+            $("#doubleClick").dblclick(function() {
+                $(this).css("color", "blue");
+            });
+
+            $("#hoverText").hover(function() {
+                $(this).css("background-color", "yellow");
+            });
+        });
+    </script>
+</body>
+</html>
